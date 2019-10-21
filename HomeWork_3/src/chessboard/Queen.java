@@ -1,4 +1,6 @@
-public class Rook extends Piece {
+package chessboard;
+
+public class Queen extends Piece {
 
     public String type;
 
@@ -8,7 +10,8 @@ public class Rook extends Piece {
     @Override
     public boolean canMove(int destNumberLocation, int destLetterLocation) {
 
-        if(((destLetterLocation - this.letterLocation) == 0 && (destNumberLocation - this.numberLocation) != 0)
+        if(Math.abs(destLetterLocation - this.letterLocation) == Math.abs(destNumberLocation - this.numberLocation) ||
+                ((destLetterLocation - this.letterLocation) == 0 && (destNumberLocation - this.numberLocation) != 0)
                 || ((destLetterLocation - this.letterLocation) != 0 && (destNumberLocation - this.numberLocation) == 0)){
             return true;
         }
@@ -16,9 +19,14 @@ public class Rook extends Piece {
         return false;
     }
 
-    public Rook(String type, int numberLocation, int letterLocation) {
+    public Queen(String type, int numberLocation, int letterLocation) {
         this.type = type;
         this.letterLocation = letterLocation;
         this.numberLocation = numberLocation;
+    }
+
+    @Override
+    public String toString() {
+        return this.type;
     }
 }

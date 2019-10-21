@@ -1,3 +1,5 @@
+package chessboard;
+
 public class Knight extends Piece {
 
     public String type;
@@ -21,5 +23,10 @@ public class Knight extends Piece {
         this.type = type;
         this.letterLocation = letterLocation;
         this.numberLocation = numberLocation;
+    }
+
+    @Override
+    public String toString() {
+        return this.type;
     }
 }

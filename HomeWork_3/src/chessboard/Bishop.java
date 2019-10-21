@@ -1,9 +1,6 @@
-/**
- * Here the pown can move forward and backward
- * because we do not know which color it has
- */
+package chessboard;
 
-public class Pown extends Piece {
+public class Bishop extends Piece {
 
     public String type;
 
@@ -13,17 +10,22 @@ public class Pown extends Piece {
     @Override
     public boolean canMove(int destNumberLocation, int destLetterLocation) {
 
-        if((Math.abs(destNumberLocation - this.numberLocation) == 1) && (destLetterLocation - this.letterLocation == 0)){
+        if(Math.abs(destLetterLocation - this.letterLocation) == Math.abs(destNumberLocation - this.numberLocation)){
+
             return true;
         }
 
         return false;
-
     }
 
-    public Pown(String type, int letterLocation, int numberLocation) {
+    public Bishop(String type, int numberLocation, int letterLocation) {
         this.type = type;
         this.letterLocation = letterLocation;
         this.numberLocation = numberLocation;
+    }
+
+    @Override
+    public String toString() {
+        return this.type;
     }
 }
