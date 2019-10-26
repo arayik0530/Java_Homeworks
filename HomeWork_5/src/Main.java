@@ -14,16 +14,14 @@ public class Main {
         char[] c = s.toCharArray();
         List<Character> newChar = new ArrayList<Character>();
         for (int i = 0; i < c.length; ++i){
-            if((c[i] >= 'a' && c[i] <= 'z') || (c[i] >= 'A' && c[i] <= 'Z')){
+            if(c[i] >= 'a' && c[i] <= 'z'){
                 newChar.add(c[i]);
             }
         }
 
-        boolean flag = true;
 
         for(int i = 0 ; i < newChar.size(); ++i){
             if(newChar.get(i) != newChar.get(newChar.size()-i-1)){
-                flag = false;
                 return false;
             }
         }
