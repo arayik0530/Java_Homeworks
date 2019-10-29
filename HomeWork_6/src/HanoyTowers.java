@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class HanoyTowers {
+    static int count = 0;
 
     public static void main(String[] args) {
 
@@ -11,15 +12,18 @@ public class HanoyTowers {
 
         while (true) {
             try {
+                count = 0;
                 int n = Integer.parseInt(scanner.nextLine().trim());
-                Date date = new Date();
+                Long startTime = System.nanoTime();
                 moveDiscs(n, '1', '2', '3');
-                Date date2 = new Date();
-                System.out.println((date2.getTime() - date.getTime()) + " milisecond/s/.");
+                Long endTime = System.nanoTime();
+                System.out.println((endTime - startTime) + " nanosecond/s/.");
+                System.out.println("Count of movements: " + count);
             } catch (NumberFormatException exc) {
                 System.out.println("Invalid input, please try again.");
             }
         }
+
     }
 
     static void moveDiscs(int n, char from, char temp, char to) {
@@ -30,6 +34,7 @@ public class HanoyTowers {
 
         moveDiscs(n-1, from, to, temp);
         System.out.println("Moving the top disc from " + from + " to " + to );
+        ++count;
         moveDiscs(n-1, temp, from, to);
     }
 

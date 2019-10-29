@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4407c0f-5613-443a-9721-45aaa647d62c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HanoyTowers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HomeWork_4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HomeWork_4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HomeWork_5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HomeWork_5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HomeWork_5/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HomeWork_5/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HanoyTowers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HanoyTowers.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,14 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HanoyTowers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+            <state relative-caret-position="165">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Thread.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="151" column="41" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -34,9 +40,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>run</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -46,12 +58,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/Hanoy.java" />
         <option value="$PROJECT_DIR$/src/HanoyTowers.java" />
+        <option value="$PROJECT_DIR$/src/132.js" />
+        <option value="$PROJECT_DIR$/src/Temp.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="88" />
-    <option name="width" value="1356" />
+    <option name="width" value="1346" />
     <option name="height" value="555" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -83,7 +97,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572106439826" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572187376679" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -101,7 +115,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Temp">
     <configuration name="HanoyTowers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HanoyTowers" />
       <module name="HomeWork_6" />
@@ -109,8 +123,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Temp" />
+      <module name="HomeWork_6" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Temp" />
         <item itemvalue="Application.HanoyTowers" />
       </list>
     </recent_temporary>
@@ -124,17 +146,21 @@
       <updated>1571937989050</updated>
       <workItem from="1571937990945" duration="1965000" />
       <workItem from="1572025426754" duration="2307000" />
-      <workItem from="1572104590671" duration="1746000" />
+      <workItem from="1572104590671" duration="4424000" />
+      <workItem from="1572164046479" duration="3314000" />
+      <workItem from="1572179245108" duration="716000" />
+      <workItem from="1572186134170" duration="728000" />
+      <workItem from="1572367903782" duration="858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6018000" />
+    <option name="totallyTimeSpent" value="14312000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="88" width="1356" height="555" extended-state="0" />
+    <frame x="0" y="88" width="1346" height="555" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25801528" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27307692" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -142,7 +168,7 @@
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6511111" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45777777" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -167,13 +193,22 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/132.js" />
+    <entry file="file://$PROJECT_DIR$/src/Temp.java" />
     <entry file="file://$PROJECT_DIR$/src/HanoyTowers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state relative-caret-position="165">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Thread.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="151" column="41" selection-start-line="151" selection-start-column="38" selection-end-line="151" selection-end-column="41" />
         </state>
       </provider>
     </entry>
