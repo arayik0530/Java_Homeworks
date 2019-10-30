@@ -1,3 +1,7 @@
+/**
+ * This class is a starting point for the application
+ */
+
 import java.util.Scanner;
 
 public class Main {

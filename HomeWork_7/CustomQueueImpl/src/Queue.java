@@ -1,3 +1,8 @@
+/**
+ * This class is a custom implementation of java.util.Queue
+ * @param <T> This class is generic and can take any object
+ */
+
 public class Queue<T> {
 
     private T arr[];
@@ -6,6 +11,10 @@ public class Queue<T> {
     private int end;
     private int count;
 
+    /**
+     * constructor
+     * @param size
+     */
     public Queue(int size) {
         this.arr = (T[]) new Object[size];
         this.length = size;
@@ -14,14 +23,26 @@ public class Queue<T> {
         this.count = 0;
     }
 
+    /**
+     * Checks wether the Queue is empty or not
+     * @return boolean
+     */
     public boolean isEmpty() {
         return (count == 0);
     }
 
+    /**
+     * Checks wether the Queue is full or not
+     * @return boolean
+     */
     public boolean isFull() {
         return (count == length);
     }
 
+    /**
+     * adds an element in Queue
+     * @param t takes an argument of any object type
+     */
     public void enqueue(T t) {
 
         if (isFull()) {
@@ -33,6 +54,9 @@ public class Queue<T> {
         System.out.println("Inserting... " + t);
     }
 
+    /**
+     * deletes the first added element from Queue
+     */
     public void dequeue(){
 
         if(isEmpty()){
@@ -53,6 +77,9 @@ public class Queue<T> {
             peek();
     }
 
+    /**
+     * prints the first added element
+     */
     public void peek(){
         if(isEmpty()){
             System.out.println("The Queue is empty.");
