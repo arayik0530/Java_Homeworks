@@ -28,7 +28,7 @@ public class Main {
 
         while (true) {
 
-            String line2 = scanner.nextLine().trim().toLowerCase();
+            String line2 = scanner.nextLine().trim().toUpperCase();
 
             switch (line2) {
 
@@ -37,7 +37,7 @@ public class Main {
 
                 case "e":
                     System.out.println("Please enter an item.");
-                    String line3 = scanner.nextLine().trim().toLowerCase();
+                    String line3 = scanner.nextLine().trim().toUpperCase();
                     queue.enqueue(line3);
                     break;
 

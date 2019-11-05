@@ -1,3 +1,5 @@
+import java.util.Collection;
+
 /**
  * This class is a custom implementation of java.util.Queue
  * @param <T> This class is generic and can take any object
