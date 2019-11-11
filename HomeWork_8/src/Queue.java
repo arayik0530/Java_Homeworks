@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Objects;
-
 /**
  * This class is a custom implementation of java.util.Queue.
  * Here are implemented the methods of the Queue and Collection interface,
@@ -10,15 +9,12 @@ import java.util.Objects;
  * such as add() and enqueue(). For more flexiblity boths are kept.
  * @param <T> This class is generic and can take any object
  */
-
 public class Queue<T> implements Collection {
-
     private T arr[];
     private int length;
     private int front;
     private int end;
     private int count;
-
     /**
      * constructor
      * @param size of initial Queue
@@ -30,7 +26,6 @@ public class Queue<T> implements Collection {
         this.end = -1;
         this.count = 0;
     }
-
     /**
      * @return the size of Queue
      */
@@ -38,14 +33,12 @@ public class Queue<T> implements Collection {
     public int size() {
         return this.count;
     }
-
     /**
      * @return current capacity of Queue
      */
     public int currentCapacity() {
         return this.length;
     }
-
     /**
      * Checks wether the Queue is empty or not
      *
@@ -53,38 +46,30 @@ public class Queue<T> implements Collection {
      */
     @Override
     public boolean isEmpty() {
-        return (count == 0);
+        return count == 0;
     }
-
     /**
      * Checks whether the Queue contains
      * a given object or not
-     *
      * @param o any Object
      * @return boolean
      */
     @Override
     public boolean contains(Object o) {
-        for (int i = 0; i < this.arr.length; i++) {
-            if (o.equals(arr[i])) {
+        for (int i = 0; i < this.arr.length; i++)
+            if (o.equals(arr[i]))
                 return true;
-            }
-        }
-
         return false;
     }
-
     /**
      * @return object of Iterator type,
      * which iterates over the Queue
      */
+
     @Override
     public Iterator iterator() {
-
         class InnerIterator implements Iterator<T> {
-
             private int index = 0;
-
             @Override
             public boolean hasNext() {
                 if (index < arr.length - 1) {
@@ -92,7 +77,6 @@ public class Queue<T> implements Collection {
                 }
                 return false;
             }
-
             @Override
             public T next() {
                 if (index <= arr.length - 1) {
@@ -100,12 +84,9 @@ public class Queue<T> implements Collection {
                 }
                 return null;
             }
-
         }
-
         return new InnerIterator();
     }
-
     /**
      *  @return the Queue as an array
      */
@@ -113,18 +94,25 @@ public class Queue<T> implements Collection {
     public Object[] toArray() {
         return this.arr;
     }
-
     /**
      * @param o any Object type
      * @return boolean whether new element was added
      * The Queue permits dublicates, so it always returns true
      */
+    private boolean linearSearch ( T arr[], Object o ) {
+        for ( byte i = 0; i < arr.length; i++ ) {
+            if ( arr[i].equals(o) )
+                return true;
+        }
+        return false;
+    }
     @Override
     public boolean add(Object o) {
+        if ( linearSearch ( arr, o ) )
+            return false;
         enqueue((T)o);
         return true;
     }
-
     /**
      * @param o o any Object
      * @return boolean
@@ -146,7 +134,6 @@ public class Queue<T> implements Collection {
         }
         return false;
     }
-
     /**
      * add a collection to the Queue
      * @param collection
@@ -161,7 +148,6 @@ public class Queue<T> implements Collection {
         }
         return true;
     }
-
     /**
      * truncates the Queue
      */
@@ -169,7 +155,6 @@ public class Queue<T> implements Collection {
     public void clear() {
         this.arr = (T[]) new Object[size()];
     }
-
     /**
      * @param collection
      * @return boolean
@@ -189,7 +174,6 @@ public class Queue<T> implements Collection {
         this.arr = newArr;
         return (!temp.equals(newArr));
     }
-
     /**
      * @param collection
      * @return boolean
@@ -214,7 +198,6 @@ public class Queue<T> implements Collection {
         this.arr = newArr;
         return (!temp.equals(newArr));
     }
-
     /**
      * @param collection
      * @return boolean
@@ -228,7 +211,6 @@ public class Queue<T> implements Collection {
         };
         return true;
     }
-
     /**
      * @param objects
      * @return boolean
@@ -237,62 +219,42 @@ public class Queue<T> implements Collection {
     public Object[] toArray(Object[] objects) {
         return this.arr;
     }
-
-
     /**
      * adds an element in Queue
-     *
      * @param t takes an argument of any object type
      */
     public void enqueue(T t) {
-
         if (this.count >= this.length * 0.75) {
-           bigArray();
+            bigArray();
         }
         arr[++end] = t;
         ++count;
-        System.out.println("Inserting... " + t);
     }
-
     /**
+
      * deletes the first added element from Queue
+
      */
     public boolean dequeue() {
-
         if (isEmpty()) {
-            System.out.println("The Queue is empty.");
             return false;
         }
-
-        System.out.println("Removing... " + arr[front]);
-
         for (int i = 0; i < count - 1; ++i) {
             arr[i] = arr[i + 1];
         }
-        arr[count - 1] = null;
-        --count;
-        if (count != 0)
-            System.out.println("Now in the Queue are " + count + " items.");
-        else
+        arr[--count] = null;
+        if ( count == 0 )
             peek();
-
         return true;
     }
-
     /**
-     * prints the first added element
+     * prints the first added element and
      * returns it
      */
     public T peek() {
-        System.out.println(arr[front]);
-        if (isEmpty()) {
-            System.out.println("The Queue is empty.");
-        }
         return arr[front];
     }
-
     private void bigArray (  ) {
         this.arr = Arrays.copyOf( this.arr, this.arr.length * 2 );
     }
-
 }
