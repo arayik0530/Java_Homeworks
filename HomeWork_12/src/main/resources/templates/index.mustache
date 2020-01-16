@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ORM Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+    <body style="position: relative">
+        <div>
+            Hello Guest
+        </div>
+        <br>
+        <div>
+            <form method="post">
+                <input type="url" name="url" placeholder="Please Enter the photo's URL" required="true">
+                <input type="text" name="commentText" placeholder="Please Enter a comment" required="true">
+                <input type="text" name="userName" placeholder="Please user's name" required="true">
+                <button type="submit">Sumbit</button>
+            </form>
+        </div>
+        <div class="customTable">
+            <br>
+            <h2>TABLE USERS</h2>
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>UserName</th>
+                    <th>Created</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#users}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{username}}</td>
+                        <td>{{created}}</td>
+                    </tr>
+                {{/users}}
+                </tbody>
+            </table>
+            <br>
+            <h2>TABLE PHOTOS</h2>
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>URL</th>
+                    <th>Created</th>
+                    <th>User_id</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#photos}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{url}}</td>
+                        <td>{{created}}</td>
+                        <td>{{user.id}}</td>
+                    </tr>
+                {{/photos}}
+                </tbody>
+            </table>
+            <br>
+            <h2>TABLE COMMENTS</h2>
+            <br>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Comment</th>
+                    <th>Created</th>
+                    <th>Photo_id</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#comments}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{comment}}</td>
+                        <td>{{created}}</td>
+                        <td>{{photo.id}}</td>
+                    </tr>
+                {{/comments}}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
