@@ -11,10 +11,24 @@
 </head>
     <body style="position: relative">
         <div>
-            <h2>Hello Guest</h2>
+            <h2>Hello User jan</h2>
         </div>
         <br>
-       <a href="http://localhost:8080/add" class="btn btn-primary" href="#" role="button">ADD IN DATABASE</a>
+        <div>
+            <form method="post">
+                <input type="url" name="url" placeholder="Please Enter the photo's URL" required="true">
+                <input type="text" name="commentText" placeholder="Please Enter a comment" required="true">
+                <input type="text" name="userName" placeholder="Please user's name" required="true">
+                <button type="submit">Submit</button>
+                <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            </form>
+        </div>
+        <div>
+            <form action="/logout" method="post">
+                <input type="submit" value="Sign Out"/>
+                <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            </form>
+        </div>
         <div class="customTable">
             <br>
             <h2>TABLE USERS</h2>

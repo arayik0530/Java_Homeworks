@@ -13,8 +13,8 @@ import project.repository.UserRepository;
 import java.util.Map;
 import java.util.Optional;
 
-@Controller("/")
-public class Test {
+@Controller
+public class AddPageController {
 
     @Autowired
     UserRepository userRepo;
@@ -23,27 +23,10 @@ public class Test {
     @Autowired
     CommentRepository commentRepo;
 
-    @GetMapping
-    public String test(@RequestParam(required = false, defaultValue = "Guest") String name,
-                       Map<String, Object> model) {
 
-        model.put("name", "User");
-
-        Iterable<UserEntity> users = userRepo.findAll();
-        model.put("users", users);
-
-        Iterable<PhotoEntity> photos = photoRepo.findAll();
-        model.put("photos", photos);
-
-        Iterable<CommentEntity> comments = commentRepo.findAll();
-        model.put("comments", comments);
-
-        return "index";
-    }
-
-    @PostMapping
-    public String test(@RequestParam String url, @RequestParam String commentText, @RequestParam String userName,
-                       Map<String, Object> model) {
+    @PostMapping("/add")
+    public String test1(@RequestParam String url, @RequestParam String commentText, @RequestParam String userName,
+                        Map<String, Object> model) {
         UserEntity user = new UserEntity(userName);
         PhotoEntity photo = new PhotoEntity(user, url);
         CommentEntity comment = new CommentEntity(photo, commentText);
@@ -64,6 +47,24 @@ public class Test {
         model.put("comments", comments);
 
 
-        return "index";
+        return "indexAdd";
+    }
+
+    @GetMapping("/add")
+    public String test1(@RequestParam(required = false, defaultValue = "Guest") String name,
+                        Map<String, Object> model) {
+
+        model.put("name", "User");
+
+        Iterable<UserEntity> users = userRepo.findAll();
+        model.put("users", users);
+
+        Iterable<PhotoEntity> photos = photoRepo.findAll();
+        model.put("photos", photos);
+
+        Iterable<CommentEntity> comments = commentRepo.findAll();
+        model.put("comments", comments);
+
+        return "indexAdd";
     }
 }
